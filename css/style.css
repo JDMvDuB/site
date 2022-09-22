@@ -47,7 +47,7 @@ ul li {
 }
 
 .header {
-    background-image: url(./../images/header-bg.jpg);
+    background-image: url(../images/header-bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
