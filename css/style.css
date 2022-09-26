@@ -847,6 +847,12 @@ header::after {
     
 }
 
+@media (max-width: 390px) {
+    .footer__logo-svg {
+        width: 250px;
+    }
+}
+
 @media (max-width: 375px) {
     .header__title {
         font-size: 55px;
