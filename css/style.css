@@ -553,6 +553,9 @@ header::after {
 .footer__top {
     display: flex;
     justify-content: space-between;
+    /* flex-wrap: nowrap; 
+    flex-direction: column; 
+    max-width: 100%;  */
 }
 
 .footer__title {
@@ -560,7 +563,9 @@ header::after {
 }
 
 .footer__form {
-    min-width: 500px;
+    /* max-width: 500px; */
+    /* box-sizing: border-box;
+    min-width: auto; */
 }
 
 .footer__form-input {
@@ -572,6 +577,7 @@ header::after {
     padding: 10px 0;
     margin-bottom: 57px;
     color: #fff;
+    /* font-size: max(16px, 18px) */
 }
 
 .footer__form-input::placeholder {
@@ -623,6 +629,14 @@ header::after {
 
 .footer__logo {
     align-self: flex-start;
+    /* min-width: 100%; */
+    /* order: -1;
+    padding: 0;
+    padding-bottom: 80px; */
+}
+
+.footer__logo-svg {
+    /* width: 350px; */
 }
 
 .footer__logo path {
@@ -746,6 +760,13 @@ header::after {
     } */
 }
 
+@media (max-width: 940px) {
+    .technology__btn {
+    right: 20px;
+    top: 40vh;
+    }
+}
+
 @media (max-width: 840px) {
     .buy__price {
         bottom: auto;
@@ -793,8 +814,10 @@ header::after {
         width: 100%;
     }
     .footer__form {
-        /* width: 100%; */
-        /* align-self: stretch; */
+        width: 100%;
+        align-self: stretch;
+        /* max-width: 200px; */
+        /* display: block; */
     }
     .info__specs-list {
         width: 100%;
@@ -824,6 +847,15 @@ header::after {
         height: 168px;
         background-size: cover;
         top: -185px;
+    }
+    .footer__top {
+        flex-wrap: nowrap; 
+        flex-direction: column; 
+        max-width: 100%;
+    }
+    .footer__form {
+        box-sizing: border-box;
+        min-width: auto;
     }
 }
 
@@ -860,5 +892,23 @@ header::after {
     } 
     .gallery-min::before {
         border-radius: 100px 0px 100px;
+    }
+}
+
+@media (max-width: 350px) {
+    .footer__form {
+        box-sizing: border-box;
+        min-width: auto;
+    }
+    .footer__form-input {
+        width:100%;
+    }
+    .footer__top {
+        /* flex-wrap: nowrap; 
+        flex-direction: column; 
+        max-width: 100%; */
+    }
+    .info__top-img {
+        max-width: 200px;
     }
 }
